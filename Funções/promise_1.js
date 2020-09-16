@@ -10,8 +10,8 @@ function firstLetter(string) {
 
 const lowerCaseLetter = letter => letter.toLowerCase()
 
-new Promise(function (response) {
-    response(["Ana", "Bia", "Carlos", "Daniel"])
+new Promise(function (resolve) {
+    resolve(["Ana", "Bia", "Carlos", "Daniel"])
   })
   .then(firstElement)
   .then(firstLetter)
