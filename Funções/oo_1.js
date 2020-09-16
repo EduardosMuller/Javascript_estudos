@@ -8,7 +8,6 @@ function Produto(nome, preco, desc = 0.15) {
   }
 }
 
-
 const p1 = new Produto("Caneta", 8.59)
 console.log(p1.preco)
 
