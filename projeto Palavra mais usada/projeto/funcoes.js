@@ -54,9 +54,27 @@ function removerElementosSeApenasNumero(array) {
   })
 }
 
-// function removerSeSimbolos(array) {
-//   return array.filter(el => )
-// }
+function removerSeSimbolos(simbolos) {
+  return function (array) {
+    return array.map(el => {
+      let textoSemSimbolos = el
+      simbolos.forEach(simbolo => {
+        textoSemSimbolos = textoSemSimbolos.split(simbolo).join("")
+      })
+      return textoSemSimbolos
+    })
+  }
+}
+
+function mesclarElementos(array) {
+  return array.join(" ")
+}
+
+function separarTextoPor(simbolo) {
+  return function (texto) {
+    return texto.split(simbolo)
+  }
+}
 
 module.exports = {
   lerDiretorio,
@@ -66,4 +84,7 @@ module.exports = {
   removerElementosSeVazio,
   removerElementosSeIncluir,
   removerElementosSeApenasNumero,
+  removerSeSimbolos,
+  mesclarElementos,
+  separarTextoPor
 }
