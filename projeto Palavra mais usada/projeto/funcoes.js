@@ -87,6 +87,14 @@ function agruparElementos(palavras) {
     return acc
   }, {}))
 }
+
+function ordernarPorAtribNumerico(atrib, ordem = "cresc") {
+  return function (array) {
+    const decrescente = (atribA, atribB) => atribB[atrib] - atribA[atrib]
+    const crescente = (atribA, atribB) => atribA[atrib] - atribB[atrib]
+    return array.sort(ordem === "cresc" ? crescente : decrescente)
+  }
+}
 module.exports = {
   lerDiretorio,
   lerUmArquivo,
@@ -99,4 +107,5 @@ module.exports = {
   mesclarElementos,
   separarTextoPor,
   agruparElementos,
+  ordernarPorAtribNumerico
 }
