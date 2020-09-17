@@ -18,19 +18,9 @@ const simbolos = [
   "}",
   "(",
   ")",
+  "[",
+  "]"
 ]
-
-function agruparPalavras(palavras) {
-  return palavras.reduce((acc, palavra) => {
-    const p = palavra.toLowerCase()
-    if (acc[p]) {
-      acc[p] += 1
-    } else {
-      acc[p] = 1
-    }
-    return acc
-  }, {})
-}
 
 fn.lerDiretorio(caminho)
   .then(fn.elementosTerminadosCom(".srt"))
@@ -45,5 +35,5 @@ fn.lerDiretorio(caminho)
   .then(fn.separarTextoPor(" "))
   .then(fn.removerElementosSeVazio)
   .then(fn.removerElementosSeApenasNumero)
-  .then(agruparPalavras)
+  .then(fn.agruparElementos)
   .then(console.log)
