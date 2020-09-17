@@ -1,1 +1,1 @@
-# Lianon
+# Estudos JS funcional
