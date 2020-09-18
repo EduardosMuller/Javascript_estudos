@@ -3,7 +3,7 @@
 // de entrada, sem efeitos colaterais observáveis
 
 
-// impura
+// impura 
 function gerarNumeroAleatorio(min, max) {
   const fator = max - min + 1
   return parseInt(Math.random() * fator) + min
