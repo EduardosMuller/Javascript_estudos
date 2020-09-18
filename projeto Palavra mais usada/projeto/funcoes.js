@@ -30,7 +30,6 @@ function lerArquivos(caminhos) {
   return Promise.all(caminhos.map(caminho => lerUmArquivo(caminho)))
 }
 
-
 function elementosTerminadosCom(padraoTextual) {
   return function (array) {
     return array.filter(elem => elem.endsWith(padraoTextual))
@@ -93,6 +92,7 @@ function ordernarPorAtribNumerico(atrib, ordem = "cresc") {
     return array.sort(ordem === "cresc" ? crescente : decrescente)
   }
 }
+
 module.exports = {
   lerDiretorio,
   lerUmArquivo,
